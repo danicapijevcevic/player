@@ -1,0 +1,39 @@
+@import "../../../style/mixins.scss";
+@import "../../../style/colors.scss";
+.player-playlist {
+  width: 1044px;
+  margin-top: 20px;
+  border-bottom: 1px solid $secondaryBackground;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  .player-playlist-title {
+    @include flex-between-center;
+    color: $mainColor;
+    margin-bottom: 20px;
+    h3 {
+      font-size: 20px;
+    }
+    .player-playlist-title-all {
+      text-decoration: underline;
+      font-size: 10px;
+    }
+  }
+  .player-playlist-items {
+    overflow: auto;
+    padding-bottom: 100px;
+    scroll-behavior: smooth;
+    height: calc(100vh - 380px);
+    scrollbar-color: #333 black;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: black;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #333;
+    }
+  }
+
+}

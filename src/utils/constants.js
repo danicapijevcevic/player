@@ -1,0 +1,1 @@
+export const CIRCLE_WIDTH = 9;

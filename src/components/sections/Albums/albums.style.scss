@@ -1,0 +1,20 @@
+@import "../../../style/colors.scss";
+@import "../../../style/mixins.scss";
+.player-albums {
+  width: 100%;
+  z-index: 11;
+  position: relative;
+  padding-left: 20px;
+  h2.player-mainheading {
+    color: $mainColor;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-align: left;
+  }
+  .player-albums-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

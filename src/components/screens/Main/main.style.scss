@@ -1,0 +1,89 @@
+@import "../../../style/colors.scss";
+@import "../../../style/mixins.scss";
+.player-main {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  background-color: $mainBackground;
+  flex-wrap: wrap;
+  .player-main-search {
+    width: 100%;
+    padding: 20px;
+    input {
+      padding: 5px;
+      border: none;
+      background-color: $secondaryBackground;
+      border-radius: 12px;
+    }
+  }
+  .player-main-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    &::after {
+      z-index: 2;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $mainBackgroundOdd;
+      opacity: 0.7;
+    }
+  }
+  .player-main-player {
+    @include flex-between-center;
+    width: 100%;
+    padding: 0 20px;
+    background-color: $mainBackgroundOddOpacity;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    z-index: 13;
+    bottom: 0;
+    left: 0;
+    audio {
+      display: none;
+    }
+  }
+
+  .player-main-central {
+    width: 100%;
+    position: relative;
+    z-index: 12;
+    padding-left: 20px;
+  }
+  .player-maincontent {
+    width: 100%;
+    display: flex;
+    scrollbar-width: thin;
+  }
+  .player-main-right {
+    width: 300px;
+    position: absolute;
+    z-index: 12;
+    top: 0;
+    right: -238px;
+    transition: 0.2s;
+    &.player-right-expand {
+      right: 0;
+    }
+  }
+  .player-main-left {
+    width: 300px;
+    position: absolute;
+    z-index: 0;
+  }
+}
+.player-main-player-right {
+  width: 300px;
+  height: 0;
+}

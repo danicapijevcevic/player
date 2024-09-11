@@ -1,0 +1,10 @@
+@import "../../../../style/mixins.scss";
+@import "../../../../style/colors.scss";
+.player-mainbuttons {
+  @include flex-between-center;
+  width: 200px;
+  padding: 3px;
+  svg {
+    color: $mainColor;
+  }
+}

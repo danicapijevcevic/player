@@ -1,0 +1,69 @@
+@import "../../../style/mixins.scss";
+@import "../../../style/colors.scss";
+
+.player-addtoplaylist {
+  background-color: $mainBackgroundOpacity;
+  width: 800px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  color: $mainColor;
+  .player-addtoplaylist-header {
+    @include flex-between-center;
+  }
+  h2 {
+    font-size: 20px;
+    color: $mainColor;
+    width: 200px;
+  }
+  .player-addtoplaylist-add {
+    @include flex-between-center;
+    width: calc(100% - 220px);
+    input {
+      border: none;
+      color: $mainColor;
+      padding: 5px;
+      width: calc(100% - 130px);
+      font-size: 15px;
+      background-color: $secondaryBackground;
+      border-radius: 4px;
+    }
+    div {
+      border-radius: 4px;
+      padding: 5px;
+      width: 120px;
+      text-align: center;
+      font-size: 15px;
+      background-color: $progressBorder;
+    }
+  }
+  .player-addtoplaylist-list {
+    .player-addtoplaylist-search {
+      margin-top: 20px;
+      input {
+        border: none;
+        color: $mainColor;
+        padding: 5px;
+        width: 300px;
+        font-size: 15px;
+        background-color: $secondaryBackground;
+        border-radius: 4px;
+      }
+    }
+    .player-addtoplaylist-table {
+      overflow: auto;
+      height: 55vh;
+      margin-top: 10px;
+      table {
+        width: 100%;
+        th,
+        td {
+          border: none;
+          padding: 5px;
+          font-size: 13px;
+          color: $mainColor;
+          border-bottom: 1px solid $loaderColor;
+        }
+      }
+    }
+  }
+}

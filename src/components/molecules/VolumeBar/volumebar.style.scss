@@ -1,0 +1,11 @@
+@import "../../../style/mixins.scss";
+@import "../../../style/colors.scss";
+.player-volumebar {
+  @include flex-between-center;
+  width: 100%;
+  .player-volumebar-img {
+    svg {
+      color: $mainColor;
+    }
+  }
+}

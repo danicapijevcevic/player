@@ -1,0 +1,59 @@
+@import "../../../style/mixins.scss";
+@import "../../../style/colors.scss";
+.player-playlistitem {
+  @include flex-between-center;
+  position: relative;
+  transition: 0.2s;
+  cursor: pointer;
+  border-bottom: 1px solid $secondaryBackground;
+  &:hover {
+    box-shadow: 0 0 5px black;
+  }
+  & > div {
+    @include flex-start-center;
+    height: 50px;
+    color: $loaderColor;
+    font-size: 17px;
+    padding: 2px 0;
+  }
+  &.player-playlistitem-active {
+    background-color: $secondaryBackground;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background-color: $progressColor;
+    }
+  }
+  .player-playlistitem-ordernumber {
+    width: 44px;
+    justify-content: center;
+    svg {
+      color: $mainColor;
+    }
+  }
+  .player-playlistitem-album {
+    width: 350px;
+    img {
+      width: 44px;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    div {
+      margin-left: 20px;
+    }
+  }
+  .player-playlistitem-track {
+    width: 300px;
+  }
+  .player-playlistitem-composer {
+    width: 280px;
+  }
+  .player-playlistitem-duration {
+    width: 70px;
+  }
+}
